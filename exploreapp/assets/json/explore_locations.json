@@ -1,0 +1,23 @@
+[
+    {
+        "index": 0,
+        "imagePath": "assets/images/zion_national_park_usa.jpg",
+        "venueName": "Zion Park",
+        "venueLocation": "USA",
+        "number_stories": 4
+    },
+    {
+        "index": 1,
+        "imagePath": "assets/images/telluride_waterfall_usa.jpg",
+        "venueName": "Telluride Fall",
+        "venueLocation": "USA",
+        "number_stories": 3
+    },
+    {
+        "index": 2,
+        "imagePath": "assets/images/rein_in_taufers_italy.jpg",
+        "venueName": "Rein in Taufers",
+        "venueLocation": "Italy",
+        "number_stories": 5
+    }
+]
