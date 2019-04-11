@@ -5,6 +5,8 @@ import '../pages/maps_page.dart';
 import '../pages/myprofile_page.dart';
 
 class HomePage extends StatelessWidget {
+
+  //Thiscustom Function will show Modal BottomSheet
   void _showSettingsBottomSheet(context) {
     showModalBottomSheet(
       context: context,
@@ -18,6 +20,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //The whole Code is wrapped in DefaultTabController to make it Controlled via Tabs
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -26,6 +30,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 50),
             Container(
+              //Settings Icon - Opens Modal BottomSheet
               padding: EdgeInsets.symmetric(horizontal: 30),
               alignment: Alignment.centerRight,
               height: 30,
@@ -42,6 +47,7 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               child: TabBarView(
+                //TabBarView defines the area of TabPages
                 children: <Widget>[
                   ExplorePage(),
                   MapsPage(),
@@ -51,6 +57,8 @@ class HomePage extends StatelessWidget {
             )
           ],
         ),
+
+        //Bottom Tabs
         bottomNavigationBar: TabBar(
           labelColor: Theme.of(context).primaryColor,
           unselectedLabelColor: Theme.of(context).accentColor,
@@ -58,15 +66,15 @@ class HomePage extends StatelessWidget {
           labelPadding: EdgeInsets.all(20),
           tabs: <Widget>[
             Tab(
-              // 1st Tab
+              // Explore Tab
               icon: Icon(IconData(0xe800, fontFamily: 'TabIcons')),
             ),
             Tab(
-              // 2nd Tab
+              // Maps Tab
               icon: Icon(IconData(0xe801, fontFamily: 'TabIcons')),
             ),
             Tab(
-              // 3rd Tab
+              // Profile Tab
               icon: Icon(IconData(0xe802, fontFamily: 'TabIcons')),
             ),
           ],

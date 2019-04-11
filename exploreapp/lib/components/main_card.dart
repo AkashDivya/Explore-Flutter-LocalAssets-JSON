@@ -6,11 +6,13 @@ class MainCard extends StatelessWidget {
   final String imagePath;
   final String venueName;
   final String venueLocation;
+  final int numberStories;
 
   MainCard({
     this.imagePath,
     this.venueName,
     this.venueLocation,
+    this.numberStories,
   });
 
   @override
@@ -98,7 +100,7 @@ class MainCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.symmetric(horizontal: 35),
                 child: Text(
-                  venueLocation + '  .  ' + '4' + ' Stories',
+                  venueLocation + '  .  ' + numberStories.toString() + ' Stories',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontFamily: 'OpenSans',

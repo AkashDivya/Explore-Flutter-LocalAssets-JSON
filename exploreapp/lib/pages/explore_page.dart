@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
+import 'dart:convert'; //This will Convert json data into usable List
 
 import '../components/searchbar.dart';
+import '../components/main_card.dart';
 
 class ExplorePage extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
+  //The following doubles will be customized according to json index
   double leftSideSpace;
   double rightSideSpace;
 
@@ -20,6 +22,7 @@ class _ExplorePageState extends State<ExplorePage> {
       padding: EdgeInsets.only(top: 0),
       children: <Widget>[
         Container(
+          //Page Heading
           height: 50,
           padding: EdgeInsets.symmetric(horizontal: 30),
           alignment: Alignment.centerLeft,
@@ -34,11 +37,13 @@ class _ExplorePageState extends State<ExplorePage> {
         ),
         SizedBox(height: 20),
         Container(
+          //SearchBar
           padding: EdgeInsets.symmetric(horizontal: 30),
           child: SearchBar(),
         ),
         SizedBox(height: 25),
         Container(
+          //This container have ListView.builder wich creates List of MainCards via json Data
           height: MediaQuery.of(context).size.height - 325,
           child: FutureBuilder(
             future: DefaultAssetBundle.of(context)
@@ -66,10 +71,12 @@ class _ExplorePageState extends State<ExplorePage> {
                   return Row(
                     children: <Widget>[
                       SizedBox(width: leftSideSpace),
-                      Container(
-                        height: MediaQuery.of(context).size.height - 325,
-                        width: MediaQuery.of(context).size.width - 60,
-                        color: Colors.green,
+                      MainCard(
+                        //MainCard is imported from main_card.dart
+                        imagePath: explorejson[index]['imagePath'],
+                        venueName: explorejson[index]['venueName'],
+                        venueLocation: explorejson[index]['venueLocation'],
+                        numberStories: explorejson[index]['numberStories'],
                       ),
                       SizedBox(width: rightSideSpace),
                     ],
