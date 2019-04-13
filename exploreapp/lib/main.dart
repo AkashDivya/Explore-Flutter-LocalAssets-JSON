@@ -11,7 +11,7 @@ void main() {
     statusBarIconBrightness: Brightness.dark,
     systemNavigationBarColor: Colors.white,
     systemNavigationBarIconBrightness: Brightness.dark,
-    systemNavigationBarDividerColor: Colors.black.withOpacity(0),
+    systemNavigationBarDividerColor: Colors.transparent,
   ));
 
   //Following code will Force the App Orientation

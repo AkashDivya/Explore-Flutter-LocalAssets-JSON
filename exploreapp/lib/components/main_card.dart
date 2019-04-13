@@ -17,21 +17,31 @@ class MainCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (BuildContext context) => DetailsPage()),
+          MaterialPageRoute(
+            builder: (BuildContext context) => DetailsPage(
+                  imagePath: imagePath,
+                  venueName: venueName,
+                  venueLocation: venueLocation,
+                  numberStories: numberStories,
+                ),
+          ),
         );
       },
       child: Stack(
         children: <Widget>[
           ClipRRect(
             borderRadius: BorderRadius.circular(5),
-            child: Image.asset(
-              imagePath,
-              width: MediaQuery.of(context).size.width - 60,
-              fit: BoxFit.fitWidth,
+            child: Hero(
+              tag: venueName + 'MainHero',
+              child: Image.asset(
+                imagePath,
+                width: MediaQuery.of(context).size.width - 60,
+                fit: BoxFit.fitWidth,
+              ),
             ),
           ),
           Column(
@@ -100,7 +110,10 @@ class MainCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.symmetric(horizontal: 35),
                 child: Text(
-                  venueLocation + '  .  ' + numberStories.toString() + ' Stories',
+                  venueLocation +
+                      '  .  ' +
+                      numberStories.toString() +
+                      ' Stories',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontFamily: 'OpenSans',
