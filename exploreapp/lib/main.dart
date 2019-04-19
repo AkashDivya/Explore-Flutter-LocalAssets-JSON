@@ -5,9 +5,10 @@ import './pages/homepage.dart';
 
 void main() {
 
-  //Following codes Customizes the StatusBar & NavigationBar
+  //Following codes Customizes the StatusBar & NavigationBar.
+  //Services Package were imported for these.
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.black.withOpacity(0),
+    statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
     systemNavigationBarColor: Colors.white,
     systemNavigationBarIconBrightness: Brightness.dark,
@@ -16,18 +17,12 @@ void main() {
 
   //Following code will Force the App Orientation
   // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _MyAppState();
-  }
-}
 
-class _MyAppState extends State<MyApp> {
-  String animationName;
+class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +36,7 @@ class _MyAppState extends State<MyApp> {
         fontFamily: 'NotoSerif',
       ),
 
-      //The HomePage is being called here hhomepage.dart
+      //The HomePage is being called here homepage.dart
       home: HomePage(),
     );
   }

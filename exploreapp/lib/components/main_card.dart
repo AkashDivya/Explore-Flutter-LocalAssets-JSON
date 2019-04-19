@@ -31,122 +31,76 @@ class MainCard extends StatelessWidget {
           ),
         );
       },
-      child: Stack(
-        children: <Widget>[
-          ClipRRect(
+      child: Container(
+        width: MediaQuery.of(context).size.width - 60,
+        child: Hero(
+          tag: venueName,
+          child: ClipRRect(
             borderRadius: BorderRadius.circular(5),
-            child: Hero(
-              tag: venueName + 'MainHero',
-              child: Image.asset(
-                imagePath,
-                width: MediaQuery.of(context).size.width - 60,
-                fit: BoxFit.fitWidth,
-              ),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  width: MediaQuery.of(context).size.width - 60,
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                    color: Colors.black.withOpacity(0.2),
+                    colorBlendMode: BlendMode.multiply,
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width - 60,
+                  padding: EdgeInsets.symmetric(horizontal: 35),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Material(
+                        color: Colors.transparent,
+                        child: Text(
+                          venueName,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 28,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Material(
+                        color: Colors.transparent,
+                        child: Text(
+                         venueLocation + '  .  ' + numberStories.toString() + ' Stories',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30),
+                      Material(
+                        color: Colors.transparent,
+                        child: Text(
+                          'EXPLORE',
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 30),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
-          Column(
-            children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width - 60,
-                height: 50,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: <Color>[
-                      Colors.black.withOpacity(0.03),
-                      Colors.black.withOpacity(0),
-                    ],
-                  ),
-                  // color: Colors.black,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(5),
-                    topRight: Radius.circular(5),
-                  ),
-                ),
-              ),
-              Expanded(child: SizedBox()),
-              Container(
-                width: MediaQuery.of(context).size.width - 60,
-                height: 250,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: <Color>[
-                      Colors.black.withOpacity(0.3),
-                      Colors.black.withOpacity(0)
-                    ],
-                  ),
-                  // color: Colors.black,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(5),
-                    bottomRight: Radius.circular(5),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Expanded(child: SizedBox()),
-              Container(
-                width: MediaQuery.of(context).size.width - 60,
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 35),
-                child: Text(
-                  venueName,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textScaleFactor: 2.5,
-                ),
-              ),
-              SizedBox(height: 5),
-              Container(
-                width: MediaQuery.of(context).size.width - 60,
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 35),
-                child: Text(
-                  venueLocation +
-                      '  .  ' +
-                      numberStories.toString() +
-                      ' Stories',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontFamily: 'OpenSans',
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              SizedBox(height: 35),
-              Container(
-                width: MediaQuery.of(context).size.width - 60,
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 35),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      'EXPLORE',
-                      style: TextStyle(
-                        fontFamily: 'OpenSans',
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).primaryColor,
-                      ),
-                    ),
-                    Expanded(
-                      child: SizedBox(),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 35),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }

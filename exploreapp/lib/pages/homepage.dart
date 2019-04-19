@@ -5,7 +5,6 @@ import '../pages/maps_page.dart';
 import '../pages/myprofile_page.dart';
 
 class HomePage extends StatelessWidget {
-
   //Thiscustom Function will show Modal BottomSheet
   void _showSettingsBottomSheet(context) {
     showModalBottomSheet(
@@ -20,7 +19,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     //The whole Code is wrapped in DefaultTabController to make it Controlled via Tabs
     return DefaultTabController(
       length: 3,
@@ -28,13 +26,14 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Column(
           children: <Widget>[
-            SizedBox(height: 50),
+            SizedBox(height: 40),
             Container(
               //Settings Icon - Opens Modal BottomSheet
               padding: EdgeInsets.symmetric(horizontal: 30),
               alignment: Alignment.centerRight,
               height: 30,
               child: IconButton(
+                padding: EdgeInsets.all(0),
                 icon: Icon(
                   IconData(0xe803, fontFamily: 'TabIcons'),
                   color: Colors.black,
@@ -45,7 +44,9 @@ class HomePage extends StatelessWidget {
                 },
               ),
             ),
-            Expanded(
+            SizedBox(height: 5),
+            Container(
+              height: MediaQuery.of(context).size.height - 165,
               child: TabBarView(
                 //TabBarView defines the area of TabPages
                 children: <Widget>[
