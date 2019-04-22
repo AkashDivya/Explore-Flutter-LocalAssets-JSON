@@ -3,19 +3,10 @@ import 'package:flutter/material.dart';
 import '../pages/explore_page.dart';
 import '../pages/maps_page.dart';
 import '../pages/myprofile_page.dart';
+import '../components/custom_appbar.dart';
 
 class HomePage extends StatelessWidget {
   //Thiscustom Function will show Modal BottomSheet
-  void _showSettingsBottomSheet(context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return Center(
-          child: Text('Settings will show up here.'),
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,28 +14,15 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(75),
+          child: CustomAppBar(),
+        ),
         backgroundColor: Colors.white,
-        body: Column(
+        body: ListView(
+          //ListView here makes sure that keyboard doesn't hide any content in any Screen Orientation.
+          padding: EdgeInsets.all(0),
           children: <Widget>[
-            SizedBox(height: 40),
-            Container(
-              //Settings Icon - Opens Modal BottomSheet
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              alignment: Alignment.centerRight,
-              height: 30,
-              child: IconButton(
-                padding: EdgeInsets.all(0),
-                icon: Icon(
-                  IconData(0xe803, fontFamily: 'TabIcons'),
-                  color: Colors.black,
-                  size: 20,
-                ),
-                onPressed: () {
-                  _showSettingsBottomSheet(context);
-                },
-              ),
-            ),
-            SizedBox(height: 5),
             Container(
               height: MediaQuery.of(context).size.height - 165,
               child: TabBarView(

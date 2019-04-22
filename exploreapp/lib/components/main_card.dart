@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../pages/detailspage.dart';
+import '../pages/details_page.dart';
 
 class MainCard extends StatelessWidget {
+
+  //Variables for datas recieved from json.
   final String imagePath;
   final String venueName;
   final String venueLocation;
   final int numberStories;
 
+  //Importing datas from json via explore_page.dart
   MainCard({
     this.imagePath,
     this.venueName,
@@ -17,8 +20,9 @@ class MainCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
+        //Creates Details Page for respective Data.
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -34,12 +38,14 @@ class MainCard extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width - 60,
         child: Hero(
-          tag: venueName,
+          //Hero Animation
+          tag: venueName + 'MainCard',
           child: ClipRRect(
             borderRadius: BorderRadius.circular(5),
             child: Stack(
               children: <Widget>[
                 Container(
+                  //Image on Card BG (from json).
                   width: MediaQuery.of(context).size.width - 60,
                   child: Image.asset(
                     imagePath,
@@ -49,6 +55,7 @@ class MainCard extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  //Texts on Card.
                   width: MediaQuery.of(context).size.width - 60,
                   padding: EdgeInsets.symmetric(horizontal: 35),
                   child: Column(
@@ -56,6 +63,7 @@ class MainCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Material(
+                        //Venue Name
                         color: Colors.transparent,
                         child: Text(
                           venueName,
@@ -69,6 +77,7 @@ class MainCard extends StatelessWidget {
                       ),
                       SizedBox(height: 5),
                       Material(
+                        //Venue Location + some other details.
                         color: Colors.transparent,
                         child: Text(
                          venueLocation + '  .  ' + numberStories.toString() + ' Stories',
@@ -83,6 +92,7 @@ class MainCard extends StatelessWidget {
                       ),
                       SizedBox(height: 30),
                       Material(
+                        //Explore Button
                         color: Colors.transparent,
                         child: Text(
                           'EXPLORE',
