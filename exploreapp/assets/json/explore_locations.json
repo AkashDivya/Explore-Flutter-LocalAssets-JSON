@@ -4,20 +4,96 @@
         "imagePath": "assets/images/zion_national_park_usa.jpg",
         "venueName": "Zion Park",
         "venueLocation": "USA",
-        "number_stories": 4
+        "description": "Zion National Park is a southwest Utah nature preserve distinguished by Zion Canyon’s steep red cliffs. Zion Canyon Scenic Drive cuts through its main section, leading to forest trails along the Virgin River.",
+        "stories": [
+            {
+                "storyIndex": 0,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Small Group Tour",
+                "storyTime": "06 Hours",
+                "storyType": "Small Tour"
+            },
+            {
+                "storyIndex": 1,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "3-Day Grand Canyon Tour",
+                "storyTime": "72 Hours",
+                "storyType": "Grand Tour"
+            },
+            {
+                "storyIndex": 2,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Full-Day VIP Tour of Zion National Park",
+                "storyTime": "24 Hours",
+                "storyType": "Premium Tour"
+            },
+            {
+                "storyIndex": 3,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Half Day 4-Hour Sunset Tour",
+                "storyTime": "12 Hours",
+                "storyType": "Fun Tour"
+            }
+        ]
     },
     {
         "index": 1,
         "imagePath": "assets/images/telluride_waterfall_usa.jpg",
         "venueName": "Telluride Fall",
         "venueLocation": "USA",
-        "number_stories": 3
+        "description": "Telluride is the county seat and most populous town of San Miguel County in the southwestern portion of the U.S. state of Colorado. The town is a former silver mining camp on the San Miguel River in the western San Juan Mountains.",
+        "stories": [
+            {
+                "storyIndex": 0,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Zion Park 24 Hours Guide1",
+                "storyTime": "24 Hours",
+                "storyType": "Family Week"
+            },
+            {
+                "storyIndex": 1,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Zion Park 24 Hours Guide1",
+                "storyTime": "24 Hours",
+                "storyType": "Family Week"
+            },
+            {
+                "storyIndex": 2,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Zion Park 24 Hours Guide1",
+                "storyTime": "24 Hours",
+                "storyType": "Family Week"
+            }
+        ]
     },
     {
         "index": 2,
         "imagePath": "assets/images/rein_in_taufers_italy.jpg",
         "venueName": "Rein in Taufers",
         "venueLocation": "Italy",
-        "number_stories": 5
+        "description": "Rein is surrounded by the nature park Rieserferner-Ahrn in a scenic, high alpine location in the Reintal. The place is the starting point for a variety of mountain tours in the Durreck group and Rieserferner group.",
+        "stories": [
+            {
+                "storyIndex": 0,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Zion Park 24 Hours Guide1",
+                "storyTime": "24 Hours",
+                "storyType": "Family Week"
+            },
+            {
+                "storyIndex": 1,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Zion Park 24 Hours Guide1",
+                "storyTime": "24 Hours",
+                "storyType": "Family Week"
+            },
+            {
+                "storyIndex": 2,
+                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyTitle": "Zion Park 24 Hours Guide1",
+                "storyTime": "24 Hours",
+                "storyType": "Family Week"
+            }
+        ]
     }
 ]

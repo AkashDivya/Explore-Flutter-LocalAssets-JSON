@@ -12,14 +12,12 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-
   //variables for conditional spaces between MainCards.
   double leftSideSpace;
   double rightSideSpace;
 
   @override
   Widget build(BuildContext context) {
-
     //Conditional Height for better view in any Screen orientation.
     double cardHeight1 = MediaQuery.of(context).size.height - 300;
     double cardHeight2 = 290;
@@ -32,7 +30,8 @@ class _ExplorePageState extends State<ExplorePage> {
     return ListView(
       //Contains the whole Page. Its a ListView but given height to
       //fix it on the Screen.
-      padding: EdgeInsets.only(top: 0), //Remove default padding provided by ListView.
+      padding: EdgeInsets.only(
+          top: 0), //Remove default padding provided by ListView.
 
       children: <Widget>[
         Container(
@@ -65,6 +64,7 @@ class _ExplorePageState extends State<ExplorePage> {
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               var explorejson = jsonDecode(snapshot.data.toString());
               
+
               //Main Horizontal ListView.Builder with MainCards
               return ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -73,15 +73,12 @@ class _ExplorePageState extends State<ExplorePage> {
                 itemCount: (explorejson != null) ? (explorejson.length) : 0,
                 itemBuilder: (BuildContext context, int index) {
                   if (index == 0) {
-                    print(index);
                     leftSideSpace = 30;
                     rightSideSpace = 0;
                   } else if (index < explorejson.length - 1) {
-                    print(index);
                     leftSideSpace = 10;
                     rightSideSpace = 0;
                   } else {
-                    print(index);
                     leftSideSpace = 10;
                     rightSideSpace = 30;
                   }
@@ -92,11 +89,14 @@ class _ExplorePageState extends State<ExplorePage> {
                         imagePath: explorejson[index]['imagePath'],
                         venueName: explorejson[index]['venueName'],
                         venueLocation: explorejson[index]['venueLocation'],
-                        numberStories: explorejson[index]['numberStories'],
+                        numberStories: explorejson[index]['stories'].length,
+                        description: explorejson[index]['description'],
+                        storyList: explorejson[index]['stories'],
                       ),
                       SizedBox(width: rightSideSpace),
                     ],
                   );
+                  
                 },
               );
             },

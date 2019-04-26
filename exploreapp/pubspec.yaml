@@ -65,10 +65,12 @@ flutter:
         - asset: assets/icons/tabicons.ttf
     - family: NotoSerif
       fonts:
+        - asset: assets/fonts/NotoSerif-Regular.ttf
+        - asset: assets/fonts/NotoSerif-Italic.ttf
         - asset: assets/fonts/NotoSerif-Bold.ttf
         - asset: assets/fonts/NotoSerif-BoldItalic.ttf
-        - asset: assets/fonts/NotoSerif-Italic.ttf
-        - asset: assets/fonts/NotoSerif-Regular.ttf
+        
+
     - family: OpenSans
       fonts:
         - asset: assets/fonts/OpenSans-Regular.ttf

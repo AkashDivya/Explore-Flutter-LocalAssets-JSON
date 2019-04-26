@@ -8,6 +8,8 @@ class DetailsPage extends StatefulWidget {
   final String venueName;
   final String venueLocation;
   final int numberStories;
+  final String description;
+  final List<dynamic> storyList;
 
   //Recieving Datas
   DetailsPage({
@@ -15,6 +17,8 @@ class DetailsPage extends StatefulWidget {
     this.venueName,
     this.venueLocation,
     this.numberStories,
+    this.description,
+    this.storyList,
   });
 
   @override
@@ -34,7 +38,7 @@ class _DetailsPageState extends State<DetailsPage> {
     controller.animateToPage(
       1,
       curve: Curves.ease,
-      duration: Duration(milliseconds: 600),
+      duration: Duration(milliseconds: 500),
     );
   }
 
@@ -55,6 +59,7 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       floatingActionButton: Container(
         //FAB to ScrollDown Page
         height: 80,
@@ -103,7 +108,10 @@ class _DetailsPageState extends State<DetailsPage> {
                 venueLocation: widget.venueLocation,
                 numberStories: widget.numberStories,
               ),
-              DetailsInfo(),
+              DetailsInfo(
+                description: widget.description,
+                storyList: widget.storyList,
+              ),
             ],
           ),
           Container(

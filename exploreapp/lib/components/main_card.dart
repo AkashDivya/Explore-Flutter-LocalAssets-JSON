@@ -9,6 +9,8 @@ class MainCard extends StatelessWidget {
   final String venueName;
   final String venueLocation;
   final int numberStories;
+  final String description;
+  final List<dynamic> storyList;
 
   //Importing datas from json via explore_page.dart
   MainCard({
@@ -16,6 +18,8 @@ class MainCard extends StatelessWidget {
     this.venueName,
     this.venueLocation,
     this.numberStories,
+    this.description,
+    this.storyList,
   });
 
   @override
@@ -31,6 +35,8 @@ class MainCard extends StatelessWidget {
                   venueName: venueName,
                   venueLocation: venueLocation,
                   numberStories: numberStories,
+                  description: description,
+                  storyList: storyList,
                 ),
           ),
         );
