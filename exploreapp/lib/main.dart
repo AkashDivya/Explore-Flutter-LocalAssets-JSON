@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xffEAC21E),
         accentColor: Color(0xffb6b6b6),
+        canvasColor: Colors.transparent,
         fontFamily: 'NotoSerif',
       ),
 

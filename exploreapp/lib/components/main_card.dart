@@ -24,8 +24,8 @@ class MainCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
+    return RawMaterialButton(
+      onPressed: () {
         //Creates Details Page for respective Data.
         Navigator.push(
           context,

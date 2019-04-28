@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/list_card.dart';
+import '../pages/story_page.dart';
 
 class DetailsInfo extends StatelessWidget {
   final String description;
@@ -65,11 +66,28 @@ class DetailsInfo extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: topSpace),
-                    ListCard(
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => StoryPage(
+                                  storyImage: storyList[index]['storyImage'],
+                                  storyTitle: storyList[index]['storyTitle'],
+                                  storyTime: storyList[index]['storyTime'],
+                                  storyType: storyList[index]['storyType'],
+                                  storyDescription: storyList[index]['storyDescription'],
+                                ),
+                          ),
+                        );
+                      },
+                      child: ListCard(
                         storyImage: storyList[index]['storyImage'],
                         storyTitle: storyList[index]['storyTitle'],
                         storyTime: storyList[index]['storyTime'],
-                        storyType: storyList[index]['storyType']),
+                        storyType: storyList[index]['storyType'],
+                      ),
+                    ),
                     SizedBox(height: bottomSpace),
                     Container(color: Color(0xffeeeeee), height: 1),
                   ],
@@ -81,11 +99,28 @@ class DetailsInfo extends StatelessWidget {
                 return Column(
                   children: <Widget>[
                     SizedBox(height: topSpace),
-                    ListCard(
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => StoryPage(
+                                  storyImage: storyList[index]['storyImage'],
+                                  storyTitle: storyList[index]['storyTitle'],
+                                  storyTime: storyList[index]['storyTime'],
+                                  storyType: storyList[index]['storyType'],
+                                  storyDescription: storyList[index]['storyDescription'],
+                                ),
+                          ),
+                        );
+                      },
+                      child: ListCard(
                         storyImage: storyList[index]['storyImage'],
                         storyTitle: storyList[index]['storyTitle'],
                         storyTime: storyList[index]['storyTime'],
-                        storyType: storyList[index]['storyType']),
+                        storyType: storyList[index]['storyType'],
+                      ),
+                    ),
                     SizedBox(height: bottomSpace),
                   ],
                 );
@@ -95,11 +130,28 @@ class DetailsInfo extends StatelessWidget {
                 return Column(
                   children: <Widget>[
                     SizedBox(height: topSpace),
-                    ListCard(
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => StoryPage(
+                                  storyImage: storyList[index]['storyImage'],
+                                  storyTitle: storyList[index]['storyTitle'],
+                                  storyTime: storyList[index]['storyTime'],
+                                  storyType: storyList[index]['storyType'],
+                                  storyDescription: storyList[index]['storyDescription'],
+                                ),
+                          ),
+                        );
+                      },
+                      child: ListCard(
                         storyImage: storyList[index]['storyImage'],
                         storyTitle: storyList[index]['storyTitle'],
                         storyTime: storyList[index]['storyTime'],
-                        storyType: storyList[index]['storyType']),
+                        storyType: storyList[index]['storyType'],
+                      ),
+                    ),
                     SizedBox(height: bottomSpace),
                     Container(color: Color(0xffeeeeee), height: 1),
                   ],

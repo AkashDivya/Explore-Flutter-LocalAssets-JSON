@@ -8,31 +8,35 @@
         "stories": [
             {
                 "storyIndex": 0,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyImage": "assets/images/zion_pic00.jpg",
                 "storyTitle": "Small Group Tour",
                 "storyTime": "06 Hours",
-                "storyType": "Small Tour"
+                "storyType": "Small Tour",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 1,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyImage": "assets/images/zion_pic01.jpg",
                 "storyTitle": "3-Day Grand Canyon Tour",
                 "storyTime": "72 Hours",
-                "storyType": "Grand Tour"
+                "storyType": "Grand Tour",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 2,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyImage": "assets/images/zion_pic02.jpg",
                 "storyTitle": "Full-Day VIP Tour of Zion National Park",
                 "storyTime": "24 Hours",
-                "storyType": "Premium Tour"
+                "storyType": "Premium Tour",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 3,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
+                "storyImage": "assets/images/zion_pic03.jpg",
                 "storyTitle": "Half Day 4-Hour Sunset Tour",
                 "storyTime": "12 Hours",
-                "storyType": "Fun Tour"
+                "storyType": "Fun Tour",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             }
         ]
     },
@@ -45,24 +49,27 @@
         "stories": [
             {
                 "storyIndex": 0,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
-                "storyTitle": "Zion Park 24 Hours Guide1",
-                "storyTime": "24 Hours",
-                "storyType": "Family Week"
+                "storyImage": "assets/images/telluride_pic00.jpg",
+                "storyTitle": "Telluride Gondola Tour",
+                "storyTime": "06 Hours",
+                "storyType": "Fun Time",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 1,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
-                "storyTitle": "Zion Park 24 Hours Guide1",
-                "storyTime": "24 Hours",
-                "storyType": "Family Week"
+                "storyImage": "assets/images/telluride_pic01.jpg",
+                "storyTitle": "Biking and Hiking Trip",
+                "storyTime": "12 Hours",
+                "storyType": "Adventure Trip",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 2,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
-                "storyTitle": "Zion Park 24 Hours Guide1",
-                "storyTime": "24 Hours",
-                "storyType": "Family Week"
+                "storyImage": "assets/images/telluride_pic02.jpg",
+                "storyTitle": "Telluride Fall Golf Experience",
+                "storyTime": "06 Hours",
+                "storyType": "Family Week",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             }
         ]
     },
@@ -75,24 +82,27 @@
         "stories": [
             {
                 "storyIndex": 0,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
-                "storyTitle": "Zion Park 24 Hours Guide1",
-                "storyTime": "24 Hours",
-                "storyType": "Family Week"
+                "storyImage": "assets/images/rein_taufers_pic00.jpg",
+                "storyTitle": "Castle King Tour",
+                "storyTime": "06 Hours",
+                "storyType": "Premium Tour",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 1,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
-                "storyTitle": "Zion Park 24 Hours Guide1",
-                "storyTime": "24 Hours",
-                "storyType": "Family Week"
+                "storyImage": "assets/images/rein_taufers_pic01.jpg",
+                "storyTitle": "Taufer Down Hill Skiing",
+                "storyTime": "10 Hours",
+                "storyType": "Adventure Tour",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             },
             {
                 "storyIndex": 2,
-                "storyImage": "assets/images/zion_national_park_usa.jpg",
-                "storyTitle": "Zion Park 24 Hours Guide1",
-                "storyTime": "24 Hours",
-                "storyType": "Family Week"
+                "storyImage": "assets/images/rein_taufers_pic02.jpg",
+                "storyTitle": "Family Camping Experience",
+                "storyTime": "48 Hours",
+                "storyType": "Family Experience",
+                "storyDescription": "I'm glad that you guys made it upto this end of the App. This is my first App and I entered this development world because I was intrigued by possibilties of Flutter. Thank You fellas."
             }
         ]
     }

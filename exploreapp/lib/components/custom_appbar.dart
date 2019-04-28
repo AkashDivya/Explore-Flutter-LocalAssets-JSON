@@ -5,8 +5,17 @@ class CustomAppBar extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Center(
-          child: Text('Settings will show up here.'),
+        return Container(
+          height: 300,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            ),
+          ),
+          child: Text('data'),
         );
       },
     );

@@ -1,5 +1,0 @@
-Compass Icon		E800
-Map Icon		E801
-User Icon		E802
-Options Icon		E803
-Search Icon		E804

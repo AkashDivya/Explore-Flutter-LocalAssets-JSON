@@ -114,32 +114,24 @@ class _DetailsPageState extends State<DetailsPage> {
               ),
             ],
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 50),
-                Container(
-                  //This Close Icon
-                  width: 30,
-                  height: 30,
-                  // alignment: Alignment.centerLeft,
-                  child: Material(
-                    color: Colors.transparent,
-                    child: IconButton(
-                      icon: Icon(Icons.close),
-                      iconSize: 30,
-                      padding: EdgeInsets.all(0),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
+          Column(
+            children: <Widget>[
+              SizedBox(height: 40),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Material(
+                  child: IconButton(
+                    icon: Icon(Icons.close),
+                    iconSize: 30,
+                    padding: EdgeInsets.all(0),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                   ),
                 ),
-              ],
-            ),
-          ),
+              ),
+            ],
+          )
         ],
       ),
     );
