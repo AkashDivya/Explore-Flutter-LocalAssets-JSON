@@ -6,8 +6,10 @@ import '../pages/myprofile_page.dart';
 import '../components/custom_appbar.dart';
 
 class HomePage extends StatelessWidget {
-  //Thiscustom Function will show Modal BottomSheet
+  final bloc;
 
+  //Recieved Bloc from main.dart
+  HomePage(this.bloc);
   @override
   Widget build(BuildContext context) {
     //The whole Code is wrapped in DefaultTabController to make it Controlled via Tabs
@@ -16,11 +18,14 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(75),
-          child: CustomAppBar(),
+
+          //Bloc is transfered from this class to CustomAppBar.
+          //Inherited widget should have been used here for more complex Apps.
+          child: CustomAppBar(bloc),
         ),
-        backgroundColor: Colors.white,
         body: ListView(
-          //ListView here makes sure that keyboard doesn't hide any content in any Screen Orientation.
+          //ListView here makes sure that keyboard doesn't hide any content
+          //in any Screen Orientation.
           padding: EdgeInsets.all(0),
           children: <Widget>[
             Container(

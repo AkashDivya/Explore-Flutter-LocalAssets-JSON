@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../pages/details_page.dart';
 
 class MainCard extends StatelessWidget {
-
   //Variables for datas recieved from json.
   final String imagePath;
   final String venueName;
@@ -24,8 +23,8 @@ class MainCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: () {
+    return InkWell(
+      onTap: () {
         //Creates Details Page for respective Data.
         Navigator.push(
           context,
@@ -41,80 +40,72 @@ class MainCard extends StatelessWidget {
           ),
         );
       },
-      child: Container(
-        width: MediaQuery.of(context).size.width - 60,
-        child: Hero(
-          //Hero Animation
-          tag: venueName + 'MainCard',
-          child: ClipRRect(
+      child: Hero(
+        tag: venueName + 'MainCard',
+        child: Container(
+          width: MediaQuery.of(context).size.width - 60,
+          padding: EdgeInsets.symmetric(horizontal: 35),
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            child: Stack(
-              children: <Widget>[
-                Container(
-                  //Image on Card BG (from json).
-                  width: MediaQuery.of(context).size.width - 60,
-                  child: Image.asset(
-                    imagePath,
-                    fit: BoxFit.cover,
-                    color: Colors.black.withOpacity(0.2),
-                    colorBlendMode: BlendMode.multiply,
-                  ),
-                ),
-                Container(
-                  //Texts on Card.
-                  width: MediaQuery.of(context).size.width - 60,
-                  padding: EdgeInsets.symmetric(horizontal: 35),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Material(
-                        //Venue Name
-                        color: Colors.transparent,
-                        child: Text(
-                          venueName,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 28,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Material(
-                        //Venue Location + some other details.
-                        color: Colors.transparent,
-                        child: Text(
-                         venueLocation + '  .  ' + numberStories.toString() + ' Stories',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontFamily: 'OpenSans',
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 30),
-                      Material(
-                        //Explore Button
-                        color: Colors.transparent,
-                        child: Text(
-                          'EXPLORE',
-                          style: TextStyle(
-                            fontFamily: 'OpenSans',
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).primaryColor,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 30),
-                    ],
-                  ),
-                ),
-              ],
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.2),
+                BlendMode.multiply,
+              ),
             ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end, //Arranges from bottom.
+            children: <Widget>[
+              Material(
+                //Venue Name
+                color: Colors.transparent,
+                child: Text(
+                  venueName,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                  ),
+                ),
+              ),
+              SizedBox(height: 5),
+              Material(
+                //Venue Location + some other details.
+                color: Colors.transparent,
+                child: Text(
+                  venueLocation +
+                      '  .  ' +
+                      numberStories.toString() +
+                      ' Stories',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontFamily: 'OpenSans',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              SizedBox(height: 30),
+              Material(
+                //Explore Button
+                color: Colors.transparent,
+                child: Text(
+                  'EXPLORE',
+                  style: TextStyle(
+                    fontFamily: 'OpenSans',
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ),
+              SizedBox(height: 30),
+            ],
           ),
         ),
       ),

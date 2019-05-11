@@ -59,7 +59,6 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       floatingActionButton: Container(
         //FAB to ScrollDown Page
         height: 80,
